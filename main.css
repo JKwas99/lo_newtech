@@ -1,0 +1,187 @@
+@media (min-width: 1000px) {
+
+.container-front-page{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.67);
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-front-page::before{
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("grafika/new_tech_tlo_glowne.png");
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;                     
+    z-index: -1; 
+}
+.przyciski-con2>a{
+    width: 250px!important;
+    display: inline-block;
+}
+
+.container-kierunki{
+    width: 100vw;
+    padding: 150px 0px 150px 8%;
+    margin: 0;
+    gap: 10px;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-40px);
+}
+
+.container-kierunki>.kierunki-desc{
+    width: 35%;
+    text-align: left;
+    position: relative
+}
+
+.container-kierunki>.kierunki-exmp{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newTech{
+    letter-spacing: 5px;
+    margin: 0px;
+    position: relative; 
+    z-index: 10;
+    color: #cf04be!important;
+}
+.container-kierunki>.kierunki-desc::before{
+    content: '';
+    width: 300px;
+    position: absolute;
+    height: 300px;
+    left: -100px;
+    z-index: -1;
+    border-radius: 50%;
+    top: -50px;
+    background-color: #2b1928;
+}
+.container-kierunki>.kierunki-desc>p{
+    z-index: 2;
+    position: relative;
+    font-size: 22px;
+    font-weight: thin;
+    color: #e0dfdf;
+}
+.container-learning{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 120px 20px 120px 20px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.53);
+    transform: translateY(-39px);
+}
+.learn-more{
+    width: 80%;
+    margin-left: 10%;
+}
+.learn-more::before{
+    content: '';
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 10%;
+    top: 60%;
+    transform: translateY(-40%);
+    height: 15%;
+    background-color: rgb(128, 223, 34);
+    position: absolute;
+    left: 5%;
+} 
+.header-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: #cf04be;
+}
+.przedmioty{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.przedmioty>div{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.przedmioty>div>img{
+    width: 100%;
+    height: 100%;
+}
+.przedmioty>div>h4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(7, 7, 7, 0.7);
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 65%;
+    font-size: 1.5vw;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+.container-learning>a{
+    transform: translateY(70px);
+    display: inline-block;
+    font-size: 22px;
+    width: auto;
+    padding: 6px 17px;
+    background-color: #cf04be;
+    color: #F6F5F2;
+    text-decoration: none;
+    transition: .3s ease;
+}
+.container-learning>a:hover{
+    background-color:#F6F5F2;
+    color: #cf04be;
+}
+.przedmioty>div:nth-of-type(even)>img{
+    transform: translateY(20px);
+    filter: drop-shadow(7px -10px 0px #cf04be);
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+.przedmioty>div:nth-of-type(odd)>img{
+    transform: translateY(-10px);
+    filter: drop-shadow(7px -10px 0px greenyellow);
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+.przedmioty>div:nth-of-type(even)>h4{
+    transform: translateY(20px);
+}
+.przedmioty>div:nth-of-type(odd)>h4{
+    transform: translateY(-10px);
+}
+
+}

@@ -1,0 +1,110 @@
+/* header_mobile.css */
+@media (max-width: 999px) {
+    header {
+      height: 15vh; 
+      position: relative;
+      z-index: 2; 
+      padding: 20px 0;
+    }
+
+    .container-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    .logo {
+        width: 60%;
+        display: flex;
+        z-index: 5;
+        justify-content: center;
+      }
+
+    .logo img {
+      height: 120px; /* Mniejsze logo na mobile */
+    }
+  
+    /* Ukrywanie normalnej nawigacji na mobile */
+    nav {
+      display: none; /* Ukrywa normalne menu na mobile */
+    }
+
+    .container-hamburger{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+      display: flex;
+      z-index: 5;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+  
+    .hamburger div {
+      background-color: #F6F5F2;
+      height: 4px;
+      z-index: 5;
+      width: 100%;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+    
+    .hamburger div:nth-child(1).open-menu{
+        transform: rotate(45deg);
+        transform: translateY(10px) rotate(45deg) ;
+    }
+    .hamburger div:nth-child(2).open-menu{
+        display: none;
+    }
+    .hamburger div:nth-child(3).open-menu{
+        transform: translateY(-10px) rotate(-45deg) ;
+    }
+    /* Mobile menu */
+    .nav-links.mobile-menu {
+        display: none; /* Ukrywa mobilne menu na początku */
+        flex-direction: column;
+        box-sizing: border-box;
+        gap: 10px;
+        background-color: rgba(7,8,24,1);
+        padding: 50% 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 100;
+        text-align: center;
+        width: 100%;
+    }
+    .mobile-menu>ul{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    .mobile-menu>ul>li{
+        margin: 10px 0px;
+    }
+    /* Pokaż mobilne menu, gdy jest aktywowane */
+    .nav-links.mobile-menu.show {
+      display: flex;
+      z-index: 2;
+    }
+  
+    .nav-links.mobile-menu a {
+      font-size: 22px;
+      padding: 10px 0px;
+      color: #F6F5F2;
+      text-decoration: none;
+    }
+  
+    /* Tło dla mobilnego menu */
+    .mobile-menu-open {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  
